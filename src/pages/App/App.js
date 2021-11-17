@@ -4,6 +4,8 @@ import './App.css';
 import userService from "../../utils/userService";
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
+import Layout from "../Layout/Layout";
+
 
 function App() {
   const [user, setUser] = useState(userService.getUser())
@@ -11,9 +13,14 @@ function App() {
   function handleSignUpLogin() {
     setUser(userService.getUser());
   }
+  
+  function handleLogout() {
+    userService.logout();
+    setUser(null);
+  }
   return (
       <Routes>
-          <Route path='/' element={<h1>Home Page</h1>} />
+          <Route path='/' element={<Layout user={user} handleLogout={handleLogout} />} />
           <Route path="/login" element={<LoginPage handleSignUpLogin={handleSignUpLogin}/>} />
           <Route path="/signup" element={<SignupPage handleSignUpLogin={handleSignUpLogin} />} />
       </Routes>

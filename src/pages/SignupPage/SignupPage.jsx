@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import { Button, Form, Grid, Header, Image, Segment, Icon } from "semantic-ui-react";
 import { useNavigate } from 'react-router-dom';
+import userService from '../../utils/userService';
 
 
 export default function SignUpPage(props){
@@ -12,7 +13,7 @@ export default function SignUpPage(props){
     username: "",
     email: "",
     password: "",
-    passwordConf: "",
+    passwordConfirm: "",
     bio: "",
   });
 
@@ -24,14 +25,15 @@ export default function SignUpPage(props){
       ...state,
       [e.target.name]: e.target.value,
     });
+    console.log(state, 'this is state')
   };
 
   function handleImage(e){
     console.log(e.target.files)
-    console.log(e.target.filed[0]) // where the url lives
+    console.log(e.target.files[0], 'this is the image file') // where the information lives
     setSelectedFile(e.target.files[0])
   }
-  function handleSubmit(evt){
+  async function handleSubmit(evt){
     evt.preventDefault();
     // sets formData to pass through fetch request
     const formData = new FormData();
@@ -40,6 +42,14 @@ export default function SignUpPage(props){
 
     for (let key in state) {
       formData.append(key, state[key])
+    }
+    try {
+      await userService.signup(formData)
+      props.handleSignUpLogin()
+      navigate('/')
+    }catch(err){
+      console.log(err)
+      setError(err.Message);
     }
   }
 
@@ -75,9 +85,9 @@ export default function SignUpPage(props){
            required
          />
          <Form.Input
-           name="passwordConf"
+           name="passwordConfirm"
            type="password"
-           placeholder="Confirm Password"
+           placeholder="confirm password"
            value={state.passwordConf}
            onChange={handleChange}
            required
@@ -85,7 +95,7 @@ export default function SignUpPage(props){
          <Form.TextArea
            label="bio"
            name="bio"
-           placeholder="Say something about yourself!"
+           placeholder="say something about yourself!"
            onChange={handleChange}
          />
          <Form.Field>
@@ -97,7 +107,7 @@ export default function SignUpPage(props){
            />
          </Form.Field>
          <Button type="submit" className="btn">
-           Signup
+           signup
          </Button>
        </Segment>
        {error ? <ErrorMessage error={error} /> : null}

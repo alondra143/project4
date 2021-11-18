@@ -6,6 +6,7 @@ import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import AddEntry from "../AddEntry/AddEntry";
 import Layout from "../Layout/Layout";
+import ForumFeed from '../ForumFeed/ForumFeed';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
   return (
       <Routes>
           <Route path='/' element={<Layout user={user} handleLogout={handleLogout} />} >
-            <Route index element={<AddEntry user={user} />}></Route>
+            <Route index element={<ForumFeed />}></Route>
             <Route path="/login" element={<LoginPage handleSignUpLogin={handleSignUpLogin}/>} />
             <Route path="/signup" element={<SignupPage handleSignUpLogin={handleSignUpLogin} />} />
             {/* <Route path="/:username" element={<ProfilePage user={user} />} /> */}

@@ -20,7 +20,7 @@ export default function PageHeader({ user, handleLogout }) {
                     </Menu.Item>
                     <Menu.Item>
                         <Header as="h2" position="right">
-                            <Link to='' onClick={handleLogout}>Logout</Link>
+                            <Link to='' onClick={handleLogout}><Icon name="logout"></Icon></Link>
                         </Header>
                     </Menu.Item>
                 </Menu>

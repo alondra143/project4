@@ -21,11 +21,12 @@ function App() {
   }
   return (
       <Routes>
-          <Route path='/' element={<Layout user={user} handleLogout={handleLogout} />} />
+          <Route path='/' element={<Layout user={user} handleLogout={handleLogout} />} >
             <Route index element={<AddEntry user={user} />}></Route>
             <Route path="/login" element={<LoginPage handleSignUpLogin={handleSignUpLogin}/>} />
             <Route path="/signup" element={<SignupPage handleSignUpLogin={handleSignUpLogin} />} />
             {/* <Route path="/:username" element={<ProfilePage user={user} />} /> */}
+            </Route>
       </Routes>
   );
 }

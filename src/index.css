@@ -13,3 +13,9 @@ code {
     monospace;
 }
 
+a {
+  color: whitesmoke;
+}
+a:hover {
+  color: red;
+}

@@ -12,7 +12,7 @@ export default function ForumFeed({user}) {
                         fontSize: '4em',
                         fontWeight: 'normal',
                         marginBottom: 0,
-                        marginTop: '2em',
+                        marginTop: '0.5em',
                     }}
                 />
                 <Header
@@ -22,7 +22,7 @@ export default function ForumFeed({user}) {
                     style={{
                         fontSize: '1.7em',
                         fontWeight: 'normal',
-                        marginTop: '1.5em',
+                        marginTop: '1em',
                     }}
                 />
                 <Button color='red' size='huge' >

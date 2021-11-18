@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import userService from "../../utils/userService";
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
+import AddEntry from "../AddEntry/AddEntry";
 import Layout from "../Layout/Layout";
 
 
@@ -13,7 +14,7 @@ function App() {
   function handleSignUpLogin() {
     setUser(userService.getUser());
   }
-  
+
   function handleLogout() {
     userService.logout();
     setUser(null);
@@ -21,8 +22,10 @@ function App() {
   return (
       <Routes>
           <Route path='/' element={<Layout user={user} handleLogout={handleLogout} />} />
-          <Route path="/login" element={<LoginPage handleSignUpLogin={handleSignUpLogin}/>} />
-          <Route path="/signup" element={<SignupPage handleSignUpLogin={handleSignUpLogin} />} />
+            <Route index element={<AddEntry user={user} />}></Route>
+            <Route path="/login" element={<LoginPage handleSignUpLogin={handleSignUpLogin}/>} />
+            <Route path="/signup" element={<SignupPage handleSignUpLogin={handleSignUpLogin} />} />
+            {/* <Route path="/:username" element={<ProfilePage user={user} />} /> */}
       </Routes>
   );
 }

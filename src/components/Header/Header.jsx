@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Header, Segment, Image, Icon, Menu } from 'semantic-ui-react';
 
 
 export default function PageHeader({ user, handleLogout }) {
+    const navigate = useNavigate();
+    if (user){
     return (
         <>
             <Segment inverted>
@@ -27,4 +29,7 @@ export default function PageHeader({ user, handleLogout }) {
             </Segment>
         </>
     )
+    }else {
+        navigate("/login")
+    }
 }

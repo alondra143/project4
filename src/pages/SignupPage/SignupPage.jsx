@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import { Button, Form, Grid, Header, Image, Segment, Icon } from "semantic-ui-react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import userService from '../../utils/userService';
 
 
@@ -28,11 +28,7 @@ export default function SignUpPage(props){
     console.log(state, 'this is state')
   };
 
-  function handleImage(e){
-    console.log(e.target.files)
-    console.log(e.target.files[0], 'this is the image file') // where the information lives
-    setSelectedFile(e.target.files[0])
-  }
+  
   async function handleSubmit(evt){
     evt.preventDefault();
     // sets formData to pass through fetch request
@@ -53,6 +49,12 @@ export default function SignUpPage(props){
     }
   }
 
+  function handleImage(e){
+    console.log(e.target.files)
+    console.log(e.target.files[0], 'this is the image file') // where the information lives
+    setSelectedFile(e.target.files[0])
+  }
+  
   return (
     <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
    <Grid.Column style={{ maxWidth: 450 }}>
@@ -109,6 +111,8 @@ export default function SignUpPage(props){
          <Button type="submit" className="btn">
            signup
          </Button>
+         <br/>
+         Already have an account? <Link to="/login">Login</Link>
        </Segment>
        {error ? <ErrorMessage error={error} /> : null}
      </Form>

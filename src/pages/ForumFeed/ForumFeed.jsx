@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
 import { Grid, Feed, Table } from "semantic-ui-react";
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import "./ForumFeed.css";
 import EntryForm from "../../components/EntryForm/EntryForm";
 import AddEntry from "../AddEntry/AddEntry"
 
 export default function ForumFeed({user}) {
     const [visible, setVisible] = useState(false);
+    const [err, setErr] = useState("");
+    const [entries, setEntries] = useState([]);
+
 
     const image = '/images/avatar/small/laura.jpg'
     const date = '3 days ago'
@@ -13,10 +17,14 @@ export default function ForumFeed({user}) {
     const extraText = "Have you seen what's going on in Israel? Can you believe it."
     const name = "Laura Faucet"
     
+   
     // const data =[{}]
     // for each entry in data(){
 
     // }
+
+    // <Icon name={"heart"} size="large" color={likeColor} onClick={clickLikes} />
+    // {entry.likes.length} Likes
     return (
         <Grid centered>
             <AddEntry visible={visible} setVisible={setVisible} />

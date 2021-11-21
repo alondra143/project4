@@ -5,7 +5,7 @@ import userService from "../../utils/userService";
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import Layout from "../Layout/Layout";
-import ForumFeed from '../ForumFeed/ForumFeed';
+import Feed from '../Feed/Feed';
 
 
 function App() {
@@ -22,29 +22,21 @@ function App() {
   if (user) {
     return (
       <Routes>
-        <Route path='/' element={<Layout user={user} handleLogout={handleLogout} />} >
-          <Route index element={<ForumFeed />}></Route>
-          <Route path="/login" element={<LoginPage handleSignUpLogin={handleSignUpLogin} />} />
+        <Route path="/" element={<Layout user={user} handleLogout={handleLogout} />} >
+          <Route index element={<Feed user={user} />}></Route>
+          <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpLogin} />} />
           <Route path="/signup" element={<SignupPage handleSignUpLogin={handleSignUpLogin} />} />
-          {/* <Route path="/:username" element={<ProfilePage user={user} />} /> */}
+          <Route path="/:username" element={<ProfilePage user={user} />} />
         </Route>
       </Routes>
     );
   }
+
   return (
     <Routes>
-      <Route
-        path="/login"
-        element={<LoginPage handleSignUpLogin={handleSignUpLogin} />}
-      />
-
-      <Route
-        path="/signup"
-        element={<SignupPage handleSignUpLogin={handleSignUpLogin} />}
-      />
+      <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpLogin} />} />
+      <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpLogin} />} />
       <Route path="/*" element={<Navigate to="/login" />} />
     </Routes>
   );
 }
-
-export default App;

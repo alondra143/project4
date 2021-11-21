@@ -54,7 +54,7 @@ export default function SignUpPage(props){
     console.log(e.target.files[0], 'this is the image file') // where the information lives
     setSelectedFile(e.target.files[0])
   }
-  
+
   return (
     <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
    <Grid.Column style={{ maxWidth: 450 }}>
@@ -73,7 +73,7 @@ export default function SignUpPage(props){
          <Form.Input
            type="email"
            name="email"
-           placeholder="email"
+           placeholder="e-mail"
            value={state.email}
            onChange={handleChange}
            required

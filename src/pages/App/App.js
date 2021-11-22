@@ -6,6 +6,7 @@ import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import Layout from "../Layout/Layout";
 import Feed from '../Feed/Feed';
+import UserProfile from "../../pages/UserProfile";
 
 
 function App() {
@@ -24,9 +25,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout user={user} handleLogout={handleLogout} />} >
           <Route index element={<Feed user={user} />}></Route>
-          <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpLogin} />} />
+          <Route path="/login" element={<LoginPage handleSignUpLogin={handleSignUpLogin} />} />
           <Route path="/signup" element={<SignupPage handleSignUpLogin={handleSignUpLogin} />} />
-          <Route path="/:username" element={<ProfilePage user={user} />} />
+          <Route path="/:username" element={<UserProfile user={user} />} />
         </Route>
       </Routes>
     );
@@ -34,8 +35,8 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpLogin} />} />
-      <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpLogin} />} />
+      <Route path="/login" element={<LoginPage handleSignUpLogin={handleSignUpLogin} />} />
+      <Route path="/signup" element={<SignupPage handleSignUpLogin={handleSignUpLogin} />} />
       <Route path="/*" element={<Navigate to="/login" />} />
     </Routes>
   );

@@ -2,6 +2,19 @@ import tokenService from './tokenService';
 
 const BASE_URL = '/api/users/';
 
+function getProfile(username){
+  return fetch(BASE_URL + username, {
+    headers: {
+      'Authorization': 'Bearer ' + tokenService.getToken()
+      }
+  }).then(res => {
+    if(res.ok) return res.json()
+    if(res.status === 404) throw new Error('ERROR: User not Found')
+    throw new Error('Bad Credentials')
+  })
+}
+
+
 function signup(user) {
   return fetch(BASE_URL + 'signup', {
     method: 'POST',
@@ -46,5 +59,6 @@ export default {
   signup, 
   getUser,
   logout,
-  login
+  login,
+  getProfile
 };

@@ -7,8 +7,27 @@ const s3 = new S3(); //initializing constructor
 
 module.exports = {
   signup,
-  login
+  login,
+  profile
 };
+
+async function profile(req, res) {
+  try {
+    // first we need to find the user that matches the username in req
+    const user = await User.findOne({ username: req.params.username })
+    // then find all the posts that belong to that user, if it exists
+    if (!user) return res.status(404).json({ err: 'User not found' })
+
+    const entries = await Entry.find({ user: user._id }).populate("user").exec();
+    console.log(entries, ' this is entries')
+    // respond to client
+    res.status(200).json({ entries: entries, user: user })
+  } catch (err) {
+    console.log(err)
+    res.status(400).json({ err })
+  }
+}
+
 
 async function signup(req, res) {
   console.log(req.body, '<-- this is req.body', req.file, '<--this is req.file multer')

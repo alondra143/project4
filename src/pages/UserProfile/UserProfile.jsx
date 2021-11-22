@@ -71,11 +71,9 @@ export default function ProfilePage(props) {
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
-        <Grid.Column style={{ maxWidth: 750 }} columns={3}>
+        <Grid.Column style={{ maxWidth: 750 }}>
           <EntryFeed
-            isProfile={true}
             entries={entries}
-            numPhotosCol={3}
             user={props.user}
 			addLike={addLike}
 			removeLike={removeLike}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Card, Loader, Dimmer, Segment, Image } from "semantic-ui-react";
-import EntryCard from "../EntryCard/EntryCard";
+import EntryComp from "../EntryComp/EntryComp";
 
 export default function EntryFeed({
   entries,
@@ -24,10 +24,9 @@ export default function EntryFeed({
       ) : null}
       {entries.map((entry) => {
         return (
-          <EntryCard
+          <EntryComp
             entry={entry}
             key={entry._id}
-            isProfile={isProfile}
             user={user}
             removeLike={removeLike}
             addLike={addLike}

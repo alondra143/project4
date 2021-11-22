@@ -58,7 +58,7 @@ export default function Feed(props) {
   useEffect(() => {
     getEntries();
   }, []);
-  
+
   if (error) {
     return <ErrorMessage error={error} />;
   }
@@ -75,7 +75,6 @@ export default function Feed(props) {
         <Grid.Column style={{ maxWidth: 450 }}>
           <EntryFeed
             entries={entries}
-            isProfile={false}
             loading={loading}
 			      user={props.user}
 			      addLike={addLike}

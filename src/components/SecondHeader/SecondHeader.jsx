@@ -28,7 +28,7 @@ export default function SecondHeader({ visible, setVisible }) {
     if (visible) {
         return (
             <>
-                <Container text>
+                <Container text className="header2">
                     <Header
                         as='h2'
                         content='Ventigo:'
@@ -55,7 +55,7 @@ export default function SecondHeader({ visible, setVisible }) {
                         <Icon name='right arrow' />
                     </Button>
                 </Container>
-                <Grid centered>
+                <Grid centered className="header2">
                     <Grid.Row>
                         <Grid.Column style={{ maxWidth: 450 }}>
                             <EntryForm handleAddEntry={handleAddEntry} />
@@ -66,7 +66,7 @@ export default function SecondHeader({ visible, setVisible }) {
         )
     }
     return (
-        <Container text>
+        <Container text className="header2">
             <Header
                 as='h2'
                 content='Ventigo:'

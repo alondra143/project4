@@ -12,7 +12,9 @@ export default function ProfileBio({ user }) {
                 ? user.photoUrl
                 : "https://react.semantic-ui.com/images/wireframe/square-image.png"
             } `}
+            size="medium"
             avatar
+            circular
           />
         </Grid.Column>
         <Grid.Column textAlign="left" style={{ maxWidth: 450 }}>
@@ -20,7 +22,7 @@ export default function ProfileBio({ user }) {
             <h3>{user.username}</h3>
           </Segment>
           <Segment>
-            <span> Bio: {user.bio}</span>
+            <span> {user.username} says: {user.bio}</span>
           </Segment>
         </Grid.Column>
       </Grid.Row>

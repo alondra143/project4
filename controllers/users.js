@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const Entry = require('../models/entry');
 const jwt = require('jsonwebtoken');
 const SECRET = process.env.SECRET;
 const { v4: uuidv4 } = require('uuid');

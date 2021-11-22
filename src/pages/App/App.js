@@ -6,10 +6,10 @@ import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import Layout from "../Layout/Layout";
 import Feed from '../Feed/Feed';
-import UserProfile from "../../pages/UserProfile";
+import UserProfile from "../../pages/UserProfile/UserProfile";
 
 
-function App() {
+export default function App() {
   const [user, setUser] = useState(userService.getUser())
 
   function handleSignUpLogin() {

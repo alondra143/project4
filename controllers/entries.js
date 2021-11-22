@@ -29,11 +29,3 @@ async function index(req, res) {
     res.status(400).json({ err });
   }
 }
-
-module.exports = {
-    create,
-}
-
-function create(req, res) {
-    console.log(req.body, req.user, '<-- this is body and user for post request');
-}

@@ -43,7 +43,7 @@ export default function LoginPage(props) {
       >
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as="h2" color="red" textAlign="center">
-            <Icon name="star" />Login
+            <Icon name="star" />Login to Ventigo
           </Header>
           <Form autoComplete="off" onSubmit={handleSubmit}>
             <Segment stacked>

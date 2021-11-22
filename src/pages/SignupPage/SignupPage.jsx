@@ -90,7 +90,7 @@ export default function SignUpPage(props){
            name="passwordConfirm"
            type="password"
            placeholder="confirm password"
-           value={state.passwordConf}
+           value={state.passwordConfirm}
            onChange={handleChange}
            required
          />

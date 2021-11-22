@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  "mongodb://localhost:27017/test", // < replace with your database name!
+  "mongodb+srv://alondra143:nikkibby1@cluster0.ii8wy.mongodb.net/project2?retryWrites=true&w=majority", // < replace with your database name!
 )
 
 const db = mongoose.connection;

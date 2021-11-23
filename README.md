@@ -1,17 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# <h1 align="center">VENTIGO</h1>
 
 ## Background Info
 Whenever talking about mental health and finding healthy outlets, one of the first suggestions tends to revolve around journaling, but it's hard to keep up and maintain if you're on the go and don't carry it around with you. Or sometimes after a long day at work, maybe a bad fight with a friend happened, the urge to word vomit everything that's been bothering you and boiling up can bring  up a lot of conflicted emotions, especially about who to turn to and vent with no fear of being judged or contested. That's the purpose of Ventigo: somewhere to type away whatever you're going through at the moment and want to expel from your system to help yourself and those around you. Make it personal, or not, and feel accepted in a little forum space that might just relate to what you have to say, and not feel so alone in frustration. A simpler MERN-stack app to get things off your chest.
 
 ### Screenshots:
+ Screenshot | Description |
+|------------ | ------------|
+| App's Log In Page | <img src="https://i.imgur.com/oWJAzpW.png" width="900"> |
+| Main Page | <img src="https://i.imgur.com/I6pqpF3.png" width="900"> |
+| Creating an Entry | <img src="https://i.imgur.com/9dlggnm.png" width="900"> |
+| User Profile | <img src="https://i.imgur.com/rfhfsIV.png" width="900"> |
+| Sign Up | <img src="https://i.imgur.com/O1KBBWd.png" width="900"> |
+
 
 ### Entity Relationship Diagram:
 <img src="https://i.imgur.com/ClQJK8G.png?1" width="900">
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
 ### Wireframe:
+<img src="https://i.imgur.com/szhLq7Y.png">
 
 ### Technologies Used:
 
@@ -21,7 +27,7 @@ MongoDB/Mongoose | Express | React | Node | Javascript | CSS
 
 [***VENTIGO***](https://ventigo.herokuapp.com/)
 
-[***MY TRELLO BOARD**]()
+[***MY TRELLO BOARD**](https://trello.com/b/J2wphnOq/project4-ventigo)
 
 ### Next Steps:
 

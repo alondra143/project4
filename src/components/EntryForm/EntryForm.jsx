@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, Grid } from "semantic-ui-react";
-import "./EntryForm.css"
+
 
 export default function AddEntryForm(props) {
   const [state, setState] = useState({

@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Icon, Image, Item, } from "semantic-ui-react";
 import "./EntryComp.css"
 import { Link } from "react-router-dom";
+import moment from 'moment';
 
 
 export default function EntryComp({ entry, user, isProfile, removeLike, addLike }) {
@@ -16,6 +17,7 @@ export default function EntryComp({ entry, user, isProfile, removeLike, addLike 
         likeIndex > -1
             ? () => removeLike(entry.likes[likeIndex]._id)
             : () => addLike(entry._id);
+    const timeAgoUser = moment(entry.createdAt).fromNow();
     return (
         <>
             {isProfile ? (
@@ -25,6 +27,7 @@ export default function EntryComp({ entry, user, isProfile, removeLike, addLike 
                         <Card.Description>{entry.body}</Card.Description>
                     </Card.Content>
                     <Card.Content extra textAlign={"right"}>
+                        Posted: {timeAgoUser}
                         <Icon name={"heart"} size="large" color={likeColor} onClick={clickLikes} />
                         {entry.likes.length} Likes
                     </Card.Content>

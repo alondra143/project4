@@ -3,6 +3,7 @@ import EntryFeed from "../../components/EntryFeed/EntryFeed";
 import EntryForm from "../../components/EntryForm/EntryForm"
 import * as entriesApi from "../../utils/entriesApi";
 import { Grid, Container, Input, Button, Header, Icon } from "semantic-ui-react";
+import "./SecondHeader.css"
 
 export default function SecondHeader({ visible, setVisible }) {
     const [entries, setEntries] = useState([]);
@@ -50,7 +51,7 @@ export default function SecondHeader({ visible, setVisible }) {
                             marginTop: '1em',
                         }}
                     />
-                    <Button color='red' size='huge' onClick={renderEntry}>
+                    <Button color='red' size='huge' onClick={renderEntry} id="buttonf">
                         Add an Entry
                         <Icon name='right arrow' />
                     </Button>

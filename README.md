@@ -1,69 +1,30 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Background Info
+Whenever talking about mental health and finding healthy outlets, one of the first suggestions tends to revolve around journaling, but it's hard to keep up and maintain if you're on the go and don't carry it around with you. Or sometimes after a long day at work, maybe a bad fight with a friend happened, the urge to word vomit everything that's been bothering you and boiling up can bring  up a lot of conflicted emotions, especially about who to turn to and vent with no fear of being judged or contested. That's the purpose of Ventigo: somewhere to type away whatever you're going through at the moment and want to expel from your system to help yourself and those around you. Make it personal, or not, and feel accepted in a little forum space that might just relate to what you have to say, and not feel so alone in frustration. A simpler MERN-stack app to get things off your chest.
 
-In the project directory, you can run:
+### Screenshots:
 
-### `npm start`
+### Entity Relationship Diagram:
+<img src="https://i.imgur.com/ClQJK8G.png?1" width="900">
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Wireframe:
 
-### `npm test`
+### Technologies Used:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+MongoDB/Mongoose | Express | React | Node | Javascript | CSS
 
-### `npm run build`
+### Getting Started: 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[***VENTIGO***](https://ventigo.herokuapp.com/)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+[***MY TRELLO BOARD**]()
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Next Steps:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# pupstaGram-starter
+After gaining more experience working with SPAs and React, I'd like to flesh out this app by allowing users to view a single entry thru a link, where they will have the ability to relate(like), and comment. 
+In terms of UI, I think this app has a lot of potential for having a clean minimalistic style that strays away from most forum-based apps. Organizing the entries by the date they were posted, and a more efficient way to reload the front page after an entry has been added at a modern pace with CSS manipulation to have the entries render on the page cleanly.
+It would also really enhance the user experience if they were able to update their bio after signing up, and changing it to a status bar where they can share with other users how they're feeling when visiting their page. 

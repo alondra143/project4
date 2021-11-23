@@ -24,6 +24,7 @@ export default function ProfilePage(props) {
   async function getProfile() {
     try {
       const data = await userService.getProfile(username);
+      console.log(data)
       setEntries(data.entries);
       setUser(data.user);
       setLoading(false);
@@ -73,13 +74,14 @@ export default function ProfilePage(props) {
       <Grid.Row>
         <Grid.Column style={{ maxWidth: 750 }}>
           <EntryFeed
+            isProfile={true}
             entries={entries}
             user={props.user}
-			addLike={addLike}
-			removeLike={removeLike}
+            addLike={addLike}
+            removeLike={removeLike}
           />
         </Grid.Column>
       </Grid.Row>
     </Grid>
-  );
+  )
 }

@@ -70,19 +70,14 @@ export default function Feed(props) {
   return (
     <>
     <SecondHeader visible={visible} setVisible={setVisible}/>
-    <Grid centered>
-      <Grid.Row>
-        <Grid.Column style={{ maxWidth: 450 }}>
           <EntryFeed
+            isProfile={false}
             entries={entries}
             loading={loading}
-			      user={props.user}
-			      addLike={addLike}
-			      removeLike={removeLike}
+            user={props.user}
+            addLike={addLike}
+            removeLike={removeLike}
           />
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
     </>
   );
 }

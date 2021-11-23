@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Card, Loader, Dimmer, Segment, Image } from "semantic-ui-react";
+import { Grid, Card, Item, Loader, Dimmer, Segment, Image } from "semantic-ui-react";
 import EntryComp from "../EntryComp/EntryComp";
 
 export default function EntryFeed({
@@ -24,13 +24,18 @@ export default function EntryFeed({
       ) : null}
       {entries.map((entry) => {
         return (
-          <EntryComp
-            entry={entry}
-            key={entry._id}
-            user={user}
-            removeLike={removeLike}
-            addLike={addLike}
-          />
+        <div id="testing">
+            <Item.Group id="testing1">
+            <EntryComp
+                entry={entry}
+                key={entry._id}
+                isProfile={isProfile}
+                user={user}
+                removeLike={removeLike}
+                addLike={addLike}
+            />
+            </Item.Group>
+        </div>
         );
       })}
     </Grid>

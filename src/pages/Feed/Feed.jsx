@@ -4,6 +4,7 @@ import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import EntryFeed from "../../components/EntryFeed/EntryFeed";
 import * as entriesApi from "../../utils/entriesApi";
 import * as likesApi from '../../utils/likesApi'
+import "./Feed.css"
 
 import { Grid, Item } from "semantic-ui-react";
 import SecondHeader from "../../components/SecondHeader/SecondHeader";
@@ -47,7 +48,7 @@ export default function Feed(props) {
 	  showLoading ? setLoading(true) : setLoading(false)
 
       const data = await entriesApi.getAll();
-      setEntries([...data.entries]);
+      setEntries([...data.entries].reverse());
       setLoading(false);
     } catch (err) {
       setError(err.message);
@@ -57,7 +58,7 @@ export default function Feed(props) {
 
   useEffect(() => {
     getEntries();
-  }, []);
+  }, [entries]);
 
   if (error) {
     return <ErrorMessage error={error} />;
@@ -70,7 +71,7 @@ export default function Feed(props) {
   return (
     <>
     <SecondHeader visible={visible} setVisible={setVisible}/>
-        <Item.Group id="testing1">
+        <Item.Group divided id="hi">
             <EntryFeed
             isProfile={false}
             entries={entries}

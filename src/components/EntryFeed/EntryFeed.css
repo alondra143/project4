@@ -1,6 +1,10 @@
-#testing {
-    padding-top: 20px;
-}
-#testing1{
-    margin: -2rem;
+#testing1 {
+    text-align: center;
+    background-color: whitesmoke;
+    padding-left: 6rem;
+    margin-bottom: 10px;
+    border-style: dotted;
+    border-width: 3px;
+    border-color: black;
+    margin-top: 0px;
 }

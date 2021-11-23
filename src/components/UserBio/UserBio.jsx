@@ -17,6 +17,7 @@ export default function ProfileBio({ user }) {
             circular
           />
         </Grid.Column>
+        <Segment>
         <Grid.Column textAlign="left" style={{ maxWidth: 450 }}>
           <Segment vertical>
             <h3 style={{color: "white"}}>{user.username}</h3>
@@ -25,6 +26,7 @@ export default function ProfileBio({ user }) {
             <span> {user.username} says: {user.bio}</span>
           </Segment>
         </Grid.Column>
+        </Segment>
       </Grid.Row>
     </Grid>
   );

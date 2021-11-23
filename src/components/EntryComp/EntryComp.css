@@ -1,7 +1,15 @@
 #entries {
     margin-top: 3rem;
     margin-left: -3rem;
+    text-align: left;
 }
+
 #divbod {
-    text-align:justify;
+    width: 30vw;
+}
+#divhead{
+    width: 30vw;
+}
+#item-img{
+    width: 10rem;
 }

@@ -28,26 +28,28 @@ export default function EntryComp({ entry, user, isProfile, removeLike, addLike 
                         <Icon name={"heart"} size="large" color={likeColor} onClick={clickLikes} />
                         {entry.likes.length} Likes
                     </Card.Content>
+              
                 </Card>
             ) : (
-                <Item key={entry._id} raised id="entries">
+                <Item.Group id="testing1">
+                    <Item key={entry._id} id="entries">
                     <Item.Content>
                         <Item.Header>
-                            <Item.Description>
-                                <Link to={`/${entry.user.username}`}>
-                                    <Item.Image
-                                        size="large"
-                                        avatar
-                                        src={
-                                            entry.user.photoUrl
-                                                ? entry.user.photoUrl
-                                                : "https://react.semantic-ui.com/images/wireframe/square-image.png"
-                                        }
-                                    />
-                                    {entry.user.username}
-                                </Link>
-                            </Item.Description>
-                        </Item.Header>
+                        <Item.Description id="item-img">
+                            <Link to={`/${entry.user.username}`}>
+                                <Item.Image
+                                    size="large"
+                                    avatar
+                                    src={
+                                        entry.user.photoUrl
+                                            ? entry.user.photoUrl
+                                            : "https://react.semantic-ui.com/images/wireframe/square-image.png"
+                                    }
+                                />
+                                {entry.user.username}
+                            </Link>
+                        </Item.Description>
+                    </Item.Header>
                     </Item.Content>
                     <Item.Content>
                         <Item.Header id="divhead">{entry.title}</Item.Header>
@@ -58,6 +60,7 @@ export default function EntryComp({ entry, user, isProfile, removeLike, addLike 
                         {entry.likes.length} Likes
                     </Item.Extra>
                 </Item>
+                </Item.Group>
             )}
         </>
     );

@@ -66,8 +66,8 @@ export default function ProfilePage(props) {
   }
 
   return (
-      <div style={{backgroundImage: `url('https://i.imgur.com/GmAPknj.jpeg')`, backgroundSize: "cover"}}id="test1">
-    <Grid centered>
+      <div style={{backgroundImage: `url('https://i.imgur.com/GmAPknj.jpeg')`, backgroundSize: "cover", height: '200vh'}}id="test1">
+    <Grid centered divided="vertically">
       <Grid.Row>
         <Grid.Column>
           <UserBio user={user} />

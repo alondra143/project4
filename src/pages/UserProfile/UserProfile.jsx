@@ -66,7 +66,7 @@ export default function ProfilePage(props) {
   }
 
   return (
-      <div style={{backgroundImage: `url('https://i.imgur.com/GmAPknj.jpeg')`, backgroundSize: "cover", height: '200vh'}}id="test1">
+      <div style={{backgroundColor: '#3e3636', backgroundSize: "cover", height: '200vh'}}id="test1">
     <Grid centered divided="vertically">
       <Grid.Row>
         <Grid.Column>

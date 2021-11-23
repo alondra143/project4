@@ -58,7 +58,7 @@ export default function Feed(props) {
 
   useEffect(() => {
     getEntries();
-  }, [entries]);
+  }, []);
 
   if (error) {
     return <ErrorMessage error={error} />;

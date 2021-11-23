@@ -7,6 +7,7 @@ import EntryFeed from "../../components/EntryFeed/EntryFeed";
 import UserBio from "../../components/UserBio/UserBio";
 import userService from "../../utils/userService";
 import * as likesApi from "../../utils/likesApi";
+import './UserProfile.css'
 
 export default function ProfilePage(props) {
   const [entries, setEntries] = useState([]);
@@ -65,6 +66,7 @@ export default function ProfilePage(props) {
   }
 
   return (
+      <div style={{backgroundImage: `url('https://i.imgur.com/GmAPknj.jpeg')`, backgroundSize: "cover"}}id="test1">
     <Grid centered>
       <Grid.Row>
         <Grid.Column>
@@ -83,5 +85,6 @@ export default function ProfilePage(props) {
         </Grid.Column>
       </Grid.Row>
     </Grid>
+    </div>
   )
 }

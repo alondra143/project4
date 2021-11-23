@@ -19,3 +19,7 @@ a {
 a:hover {
   color: red;
 }
+#sign-up-pg{
+  background-image: url('https://i.imgur.com/GmAPknj.jpeg');
+  background-size: cover;
+}

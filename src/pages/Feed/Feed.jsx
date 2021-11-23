@@ -5,7 +5,7 @@ import EntryFeed from "../../components/EntryFeed/EntryFeed";
 import * as entriesApi from "../../utils/entriesApi";
 import * as likesApi from '../../utils/likesApi'
 
-import { Grid } from "semantic-ui-react";
+import { Grid, Item } from "semantic-ui-react";
 import SecondHeader from "../../components/SecondHeader/SecondHeader";
 
 export default function Feed(props) {
@@ -70,14 +70,16 @@ export default function Feed(props) {
   return (
     <>
     <SecondHeader visible={visible} setVisible={setVisible}/>
-          <EntryFeed
+        <Item.Group id="testing1">
+            <EntryFeed
             isProfile={false}
             entries={entries}
             loading={loading}
             user={props.user}
             addLike={addLike}
             removeLike={removeLike}
-          />
+            />
+        </Item.Group>
     </>
   );
 }

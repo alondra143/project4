@@ -35,7 +35,7 @@ export default function LoginPage(props) {
   }
 
   return (
-    <>
+    <div style={{backgroundImage: `url("https://i.imgur.com/iLV9uSr.jpg")`, backgroundSize: 'cover'}} id="logindiv">
       <Grid
         textAlign="center"
         style={{ height: "100vh" }}
@@ -80,7 +80,7 @@ export default function LoginPage(props) {
           {errr ? <ErrorMessage error={errr} /> : null}
         </Grid.Column>
       </Grid>
-    </>
+    </div>
   );
 }
 
